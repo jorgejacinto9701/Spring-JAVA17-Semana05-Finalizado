@@ -12,7 +12,4 @@ public interface ModalidadService {
 	public abstract Modalidad actualizaModalidad(Modalidad obj);
 	public abstract List<Modalidad> listaPorNombreLike(String nombre);
 	public abstract Optional<Modalidad> buscaModalidad(int idModalidad);
-	
-	public abstract List<Modalidad> buscaPorDeporteEnSede(String sede, int idDeporte);
-	
 }
