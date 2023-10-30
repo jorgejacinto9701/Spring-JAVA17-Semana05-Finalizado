@@ -391,6 +391,22 @@
         }   
     });
 	
+	//Evento para validar apellidos al cambiar nombres
+	$('#id_reg_nombres').on('change keyup', function() {
+	    $('#id_reg_apellidos').trigger('input');
+	}),
+	$('#id_act_nombres').on('change keyup', function() {
+	    $('#id_act_apellidos').trigger('input');
+	}),
+
+	// Evento para validar nombres al cambiar apellidos
+	$('#id_reg_apellidos').on('change keyup', function() {
+	    $('#id_reg_nombres').trigger('input');
+	}),
+	$('#id_act_apellidos').on('change keyup', function() {
+	    $('#id_act_nombres').trigger('input');
+	}),
+
 	
 	$('#id_form_actualiza').bootstrapValidator({
         message: 'This value is not valid',
